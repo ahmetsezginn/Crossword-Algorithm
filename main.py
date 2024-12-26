@@ -1,6 +1,7 @@
 import flask
 from flask import request, Response
 from crossword import BestPuzzle
+import os
 
 app = flask.Flask(__name__) 
 @app.route('/generate-puzzle')
@@ -19,4 +20,4 @@ def generate_puzzle():
     return Response(best_puzzle.best_puzzle_text, mimetype='text/plain')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))

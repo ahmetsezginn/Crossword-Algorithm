@@ -3,10 +3,10 @@ from flask import request, Response
 from crossword import BestPuzzle
 
 app = flask.Flask(__name__) 
-@app.route('/generate_puzzle')
+@app.route('/generate-puzzle')
 def hello():
     return "Hello World!"
-@app.route('/generate_puzzle', methods=['POST'])
+@app.route('/generate-puzzle', methods=['POST'])
 def generate_puzzle():
     data = request.json
     words = data.get('names', [])

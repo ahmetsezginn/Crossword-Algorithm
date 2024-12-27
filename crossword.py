@@ -192,7 +192,7 @@ class BestPuzzle:
                 self.best_puzzle_text += f"{''.join(row)}\n"
         return self.best_puzzle_text
 if __name__ == "__main__":
-    words = ['ahmet', 'umut','selim','mehmet','mervan']
+    words = ['ahmet', 'umut','selim','mehmet','mervan','govo']
     grid_width = 10
     grid_height = 20
     best_puzzle=BestPuzzle(words=words, grid_width=grid_width, grid_height=grid_height)
